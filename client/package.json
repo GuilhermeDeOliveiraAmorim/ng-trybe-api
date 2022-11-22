@@ -1,0 +1,45 @@
+{
+  "name": "ng-trybe",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev ./src",
+    "build": "next build",
+    "start": "next build ./src && next start ./src",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "apexcharts": "^3.36.3",
+    "axios": "^1.1.3",
+    "chakra-dayzed-datepicker": "^0.2.5",
+    "date-fns": "^2.29.3",
+    "dayzed": "^3.2.3",
+    "eslint": "8.27.0",
+    "eslint-config-next": "13.0.3",
+    "framer-motion": "^6.5.1",
+    "js-cookie": "^3.0.1",
+    "moment": "^2.29.4",
+    "next": "12.1.6",
+    "next-cookies": "^2.0.3",
+    "postcss": "^8.4.19",
+    "react": "18.2.0",
+    "react-apexcharts": "^1.4.0",
+    "react-dom": "18.2.0",
+    "react-icons": "^4.6.0",
+    "tailwindcss": "^3.2.4",
+    "typescript": "4.8.4"
+  },
+  "devDependencies": {
+    "@chakra-ui/react": "^2.4.1",
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
+    "@tanstack/react-query": "^4.16.1",
+    "@types/bcryptjs": "^2.4.2",
+    "@types/js-cookie": "^3.0.2",
+    "@types/moment": "^2.13.0",
+    "@types/node": "18.11.9",
+    "@types/react": "18.0.25",
+    "@types/react-dom": "18.0.9",
+    "autoprefixer": "^10.4.13"
+  }
+}

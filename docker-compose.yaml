@@ -1,0 +1,52 @@
+version: "3"
+
+services:
+  client:
+    build:
+      context: ./client
+      dockerfile: Dockerfile.prod
+    ports:
+      - 3000:3000
+    command: npm run start
+    volumes:
+      - ./client:/home/app/client
+      - /home/app/client/node_modules
+    networks:
+      - ng_cash
+
+  api:
+    build:
+      context: ./api
+      dockerfile: Dockerfile.prod
+    volumes:
+      - ./api:/home/app/api
+      - /home/app/api/node_modules
+    command: npm run run-prod
+    environment:
+      DB_HOST: postgres
+      DB_USER: postgres
+      DB_PORT: 5432
+      DB_PASSWORD: password
+      DB_NAME: ng
+      PORT: 8000
+    ports:
+      - 8000:8000
+    depends_on:
+      - postgres
+    networks:
+      - ng_cash
+
+  postgres:
+    container_name: postgres
+    restart: always
+    image: postgres
+    ports:
+      - 15432:5432
+    environment:
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: ng
+    networks:
+      - ng_cash
+
+networks:
+  ng_cash:
