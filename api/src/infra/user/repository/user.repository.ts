@@ -3,9 +3,6 @@ import User from "../../../domain/users/entity/user.entity";
 import UserModel from "./user.model";
 import Account from "../../../domain/accounts/entity/account";
 
-
-
-
 export default class UserRepository implements UserRepositoryInterface {
 
     async add(user: User): Promise<void> {
