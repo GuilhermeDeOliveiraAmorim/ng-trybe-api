@@ -6,8 +6,6 @@ import User from "../../../../domain/users/entity/user.entity";
 import UserRepositoryInterface from "../../../../domain/users/repository/user.repository.interface";
 import { InputCreateUserDto, OutputCreateUserDto } from './create_user.dto'
 
-
-
 export default class CreateUserUseCase implements UseCaseInterface {
     private userRepository: UserRepositoryInterface;
     private accountRepository: AccountRepositoryInterface
