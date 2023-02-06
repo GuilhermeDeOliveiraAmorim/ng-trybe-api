@@ -41,7 +41,7 @@ services:
     restart: always
     image: postgres
     ports:
-      - 15432:5432
+      - 15432:5433
     environment:
       POSTGRES_PASSWORD: password
       POSTGRES_DB: ng
